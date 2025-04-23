@@ -2,3 +2,5 @@
 UI Design Midterm Images
 
 Yumetex Textile Company
+
+Video Demo: https://youtu.be/fmOJS82Orzg
