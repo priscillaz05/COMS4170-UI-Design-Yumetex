@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<!-- 
+<div id="welcome-message">
+    Search your favorite Minecraft blocks!
+</div>
+
+<div id="database-size-message">
+    Current database size: {{blocks_len}}
+</div> -->
+
+<div id="featured-title">
+    Made of time, culture, and passion.
+</div>
+
+<div id="fabric-order" class="dark-grey">
+    Fabrics available for order.
+</div>
+
+<div id="start-exploring" class="dark-grey">
+    Start exploring:
+</div>
+
+<div id="featured-container" class="row">
+
+</div>
+
+{% block scripts %}
+<!-- Inject fav_blocks data into JS, before the external JS file -->
+<script>
+    let fav_blocks = {{ fav_blocks | tojson | safe }};
+</script>
+{% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container" id="success-message-container">
+
+</div>
+
+<h1> Add Item </h1>
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Article Name:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="itemname"></label>
+            <input id="itemname" type="text" placeholder="Article Name">
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Article Number:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="articleNo"></label>
+            <input id="articleNo" type="text" placeholder="Article No.">
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Price:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="price"></label>
+            <input id="price" type="text" placeholder="Price">
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Minimum Order Quantity:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="MOQ"></label>
+            <input id="MOQ" type="text" placeholder="MOQ">
+        </div>
+    </div>
+</div>
+
+<br>
+
+<!-- Make this entry so that entered items are formed into a list? -->
+<div class="row">
+    <div class="col-3">
+        Fabric Composition:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="fabricComp"></label>
+            <input id="fabricComp" type="text" placeholder="Fabric info.">
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Description:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="description"></label>
+            <input id="description" type="text" placeholder="Description">
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-3">
+        Image:
+    </div>
+
+    <div class="col-4">
+        <div class="ui-widget">
+            <label for="fabricImage"></label>
+            <input id="fabricImage" type="text" placeholder="Link to Image">
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+
+<div class="row">
+    <div class="col-2">
+        <button id="submit-add-button"> Submit </button>
+    </div>    
+</div>
+
+<br>
+
+<!-- <div class="row">
+    <div class = "col-2">
+        <button id="back-button" onclick="history.back()"> Go Back </button>
+    </div>
+    
+    <a class = "col-2" href="/">Back to Home</a>
+</div> -->
+
+
+{% endblock %}

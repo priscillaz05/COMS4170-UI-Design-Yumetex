@@ -1,0 +1,62 @@
+<!-- Priscilla Zhu QZ2531 -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <!-- Minecraft font -->
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+
+  <!-- My style sheet -->
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+  <title> Yumetex </title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <a class="navbar-brand" id="home-page-title" href="/"> Yumetex Textile Company </a>
+
+      <a class="navbar-brand" id="add-item-button" href="/add"> Add</a>
+
+      <div class="navbar-nav">
+        <input class="form-control mr-sm-2" id="search-box" type="search" placeholder="Search for a fabric"
+          aria-label="Search">
+        <button class="btn my-2 my-sm-0 btn btn-outline-dark" id="submit-button" type="submit"> Search </button>
+      </div>
+
+    </div>
+
+    </div>
+
+  </nav>
+
+  <div class="container content-container">
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+
+  <script type="text/javascript" src="{{ url_for('static', filename = 'blocks.js') }}"></script>
+
+</body>
+
+</html>

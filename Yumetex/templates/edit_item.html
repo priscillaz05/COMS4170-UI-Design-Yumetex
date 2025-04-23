@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Edit Item</h1>
+
+<form method="POST">
+
+    <div class="form-group">
+        <label for="name">Item Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ item['name'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="{{ item['description'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="fabric-comp">Fabric Composition</label>
+        <input type="text" class="form-control" id="fabric-comp" name="fabric-comp" value="{{ item['fabric-comp']|join(', ') }}">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" value="{{ item['price'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="MOQ"> Minimum Order Quantity</label>
+        <input type="text" class="form-control" id="MOQ" name="MOQ" value="{{ item['MOQ'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="article-no"> Article No. </label>
+        <input type="text" class="form-control" id="article-no" name="article-no" value="{{ item['article-no'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="image">Image URL</label>
+        <input type="text" class="form-control" id="image" name="image" value="{{ item['image'] }}">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-dark" id="submit-changes">Submit Changes</button>
+        <a href="{{ url_for('view_item', item_id=item['id']) }}" class="btn btn-outline-dark" id="discard-changes">Discard Changes</a>
+    </div>
+
+</form>
+
+<script>
+    var itemId = {{ item['id'] | tojson }};
+
+    document.getElementById('discard-changes').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        
+        // Display the confirmation dialog
+        let userConfirmed = confirm("Are you sure you want to discard changes? You will lose any unsaved changes.");
+    
+        if (userConfirmed) {
+            // Use the global itemId variable passed from the inline script
+            window.location.href = "/view/" + itemId; // Redirect to the view page
+        } else {
+            // User canceled, no action needed, stay on the page
+        }
+    });
+</script>
+
+{% endblock %}
